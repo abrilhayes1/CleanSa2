@@ -28,7 +28,7 @@ public class ControllerCliente <T extends Cliente> implements ClienteRepository,
 	                "SELECT * FROM cliente WHERE dni = ? AND contrasena = ?"
 	            );//copiar consulta de insert para producto
 	            stmt.setString(1, DNI);
-	            stmt.setString(2,encriptar(contrasena));
+	            stmt.setString(2,contrasena);
 	            
 	            
 	            ResultSet rs = stmt.executeQuery();
@@ -64,14 +64,6 @@ public class ControllerCliente <T extends Cliente> implements ClienteRepository,
 	            PreparedStatement statement = con.prepareStatement(
 	                "INSERT INTO cliente (nombre , direccion, dni, contrasena, fk_categoria_usuarios) VALUES (?, ?, ?, ?, ?)"
 	            );
-	            
-	            /*estos son parametros (AGREGAR)*/
-	           
-	            /*BLL pasar validaciones a bll, (como esta hecho en controllerCliente)*/
-	           
-	    		/*aca*/
-	            
-	            
 	            statement.setString(1, nombre );
 	            statement.setString(2, direccion);
 	            statement.setString(3, dni);
@@ -262,6 +254,60 @@ public class ControllerCliente <T extends Cliente> implements ClienteRepository,
 		}
 		 
 		
+	}
+	public static String agregarClienteProfe(String nombre, String contrasena, String direccion, String dni, String tipo) {
+		//String contrasena2 = controller.validarPassword(contrasena);
+		//if (contrasena2.isEmpty()) {
+		  //  return "Contraseña inválida";
+		//}
+		//String validar="";s
+		ControllerCliente controller=new ControllerCliente();
+		Cliente prueba = null;	
+			if (nombre.isEmpty()) {
+				
+				return "El nombre esta vacio";
+			}
+			
+			if (contrasena.isEmpty()) {
+				return "Se produjo un error con la contraseña. Ingresela nuevamente";
+			}
+
+			if (direccion.isEmpty()) {
+				
+				return "La direccion esta vacia";
+			}
+
+			if (dni.isEmpty()) {
+				
+				return "El dni esta vacio";
+				
+			}else if (dni.length()<8||dni.length()>=9) {
+				
+				return "El dni debe ser igual a 8 caracteres";
+			}
+				int tamaño=dni.length();
+				for (int i = 0; i < tamaño; i++) {
+					if (!Character.isDigit(dni.charAt(i))) {
+						return "El dni tiene letras";
+					}
+					
+				}
+			prueba = (Cliente) ControllerCliente.validar2(dni);
+			if (prueba!=null) {
+				
+				return "Ese cliente ya existe";
+			}
+			
+		int tipo2 = 0;
+			String tipo1 = tipo;
+			if (tipo1.equalsIgnoreCase("general")) {
+				tipo2 = 1;
+			} else if (tipo1.equalsIgnoreCase("empresa")) {
+				tipo2 = 2;
+			}
+
+		ControllerCliente.agregarCliente2(nombre, contrasena, direccion, dni, tipo2);
+		return "si";
 	}
 
 	@Override

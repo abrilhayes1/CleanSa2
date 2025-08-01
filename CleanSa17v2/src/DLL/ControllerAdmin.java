@@ -66,4 +66,7 @@ public class ControllerAdmin <T extends Administrador> implements AdministradorR
 		return null;
 	}
 	
+	public void cupon () {
+		
+	}	
 }

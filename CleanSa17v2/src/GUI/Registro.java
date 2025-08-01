@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import BLL.*;
+import DLL.ControllerCliente;
 
 import java.awt.SystemColor;
 import javax.swing.JLabel;
@@ -136,22 +137,22 @@ public class Registro extends JFrame {
 		JButton registrar = new JButton("Regitrar");
 		registrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Cliente cliente =new Cliente();
-				
+				String validar = ControllerCliente.agregarClienteProfe(
+					Inpnombre.getText(),
+					inpcontrasena.getText(),
+					inpdireccion.getText(),
+					inpDNI.getText(),
+					(String) tipoUsuario.getSelectedItem()
+				);
 
-				String validar=cliente.agregarClienteProfe(Inpnombre.getText()
-						,inpcontrasena.getText(),inpdireccion.getText()
-						,inpDNI.getText(),(String) tipoUsuario.getSelectedItem() );
 				if (validar.equals("si")) {
 					RegistroCorrecto registrocorrecto = new RegistroCorrecto();
-					registrocorrecto.setVisible(true);;
+					registrocorrecto.setVisible(true);
 					dispose();
-				}else {
+				} else {
 					LblError.setText(validar);
 				}
-				
 			}
-			
 		});
 		registrar.setBackground(SystemColor.menu);
 		registrar.setFont(new Font("Verdana", Font.ITALIC, 12));
