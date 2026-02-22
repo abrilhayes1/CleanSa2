@@ -72,6 +72,9 @@ public class menuprincipal extends JFrame {
 		JButton btnAdministrador = new JButton("Administrador");
 		btnAdministrador.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				LoginAdmin LoginAdmin = new LoginAdmin();
+				LoginAdmin.setVisible(true);;
+				dispose();
 			}
 		});
 		
