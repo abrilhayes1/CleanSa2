@@ -3,6 +3,8 @@ package GUI.Admin;
 import java.awt.Color;
 import java.awt.EventQueue;
 import DLL.*;
+import GUI.AdminENvios.vistaAdminEnvios;
+import GUI.AdminVentas.vistaAdminVentas;
 import BLL.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;

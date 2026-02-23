@@ -1,4 +1,4 @@
-package GUI.Admin;
+package GUI.AdminVentas;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -8,11 +8,12 @@ import java.awt.*;
 
 import BLL.Cliente;
 import DLL.ControllerCliente;
+import GUI.common.BaseFrame;
 
 import java.awt.event.ActionEvent;
 import java.util.LinkedList;
 
-public class vistaVerCliente extends JFrame {
+public class vistaVerCliente extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -20,9 +21,9 @@ public class vistaVerCliente extends JFrame {
 	private DefaultTableModel model;
 
 	public vistaVerCliente() {
+		super();
 		setTitle("Ver Clientes");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 450);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -68,8 +69,17 @@ public class vistaVerCliente extends JFrame {
 			ventana.setVisible(true);
 			dispose();
 		});
-
 		cargarClientes();
+		
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnSalir.setBounds(240, 350, 120, 40); // CENTRADO
+		btnSalir.addActionListener(e -> {
+			vistaAdminVentas vistaAdminVentas = new vistaAdminVentas();
+			vistaAdminVentas.setVisible(true);
+		    dispose(); // CIERRA ESTA VENTANA
+		});
+		contentPane.add(btnSalir);
 	}
 
 	private void cargarClientes() {

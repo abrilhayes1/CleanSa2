@@ -1,4 +1,4 @@
-package GUI.Admin;
+package GUI.AdminVentas;
 
 import java.awt.EventQueue;
 
@@ -7,12 +7,14 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import BLL.Producto;
+import GUI.common.BaseFrame;
+
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class vistaModificarStock extends JFrame {
+public class vistaModificarStock extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -37,8 +39,7 @@ public class vistaModificarStock extends JFrame {
 	 * Create the frame.
 	 */
 	public vistaModificarStock() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		super();
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -57,6 +58,16 @@ public class vistaModificarStock extends JFrame {
 		JButton boton_modificar = new JButton("Modificar");
 		boton_modificar.setBounds(91, 72, 75, 23);
 		contentPane.add(boton_modificar);
+		
+		JButton btnSalir = new JButton("Volver");
+		btnSalir.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnSalir.setBounds(240, 350, 120, 40); // CENTRADO
+		btnSalir.addActionListener(e -> {
+			vistaAdminVentas vistaAdminVentas = new vistaAdminVentas();
+			vistaAdminVentas.setVisible(true);
+		    dispose(); // CIERRA ESTA VENTANA
+		});
+		contentPane.add(btnSalir);
 	}
 	
 	public Producto traerProductos() {

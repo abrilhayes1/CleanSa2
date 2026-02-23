@@ -10,7 +10,7 @@ import javax.swing.border.EmptyBorder;
 import BLL.*;
 
 import DLL.*;
-import GUI.Admin.VerCliente;
+import GUI.AdminVentas.VerCliente;
 import GUI.common.menuprincipal;
 
 import java.awt.SystemColor;

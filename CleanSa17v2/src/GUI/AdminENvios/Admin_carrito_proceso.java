@@ -1,4 +1,4 @@
-package GUI.Admin;
+package GUI.AdminENvios;
 
 import java.awt.EventQueue;
 import java.awt.SystemColor;
@@ -19,8 +19,9 @@ import javax.swing.table.DefaultTableModel;
 
 import BLL.*;
 import DLL.*;
+import GUI.common.BaseFrame;
 
-public class Admin_carrito_proceso extends JFrame {
+public class Admin_carrito_proceso extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -49,8 +50,7 @@ public class Admin_carrito_proceso extends JFrame {
 	 * Create the frame.
 	 */
 	public Admin_carrito_proceso() {
-		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        setBounds(100, 100, 800, 500);
+			super();
 	        contentPane = new JPanel();
 	        contentPane.setBackground(SystemColor.controlShadow);
 	        contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));

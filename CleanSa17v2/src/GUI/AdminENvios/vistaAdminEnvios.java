@@ -1,4 +1,4 @@
-package GUI.Admin;
+package GUI.AdminENvios;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -11,9 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import GUI.Admin.LoginAdmin;
 import GUI.Cliente.verCarrito;
+import GUI.common.BaseFrame;
 
-public class vistaAdminEnvios extends JFrame {
+public class vistaAdminEnvios extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -32,8 +34,7 @@ public class vistaAdminEnvios extends JFrame {
 	}
 
 	public vistaAdminEnvios() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 560, 320); // Tamaño ampliado
+		super();
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
