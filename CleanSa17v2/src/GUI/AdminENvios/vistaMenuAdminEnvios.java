@@ -15,7 +15,7 @@ import GUI.Admin.LoginAdmin;
 import GUI.Cliente.verCarrito;
 import GUI.common.BaseFrame;
 
-public class vistaAdminEnvios extends BaseFrame {
+public class vistaMenuAdminEnvios extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -24,7 +24,7 @@ public class vistaAdminEnvios extends BaseFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					vistaAdminEnvios frame = new vistaAdminEnvios();
+					vistaMenuAdminEnvios frame = new vistaMenuAdminEnvios();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +33,7 @@ public class vistaAdminEnvios extends BaseFrame {
 		});
 	}
 
-	public vistaAdminEnvios() {
+	public vistaMenuAdminEnvios() {
 		super();
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -42,7 +42,7 @@ public class vistaAdminEnvios extends BaseFrame {
 
 		// Logo
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(vistaAdminEnvios.class.getResource("/img/logo.png")));
+		lblNewLabel.setIcon(new ImageIcon(vistaMenuAdminEnvios.class.getResource("/img/logo.png")));
 		lblNewLabel.setBounds(95, 20, 369, 127); // Centrado horizontalmente
 		contentPane.add(lblNewLabel);
 

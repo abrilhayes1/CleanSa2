@@ -152,7 +152,7 @@ public class vistaCrearCategoria extends BaseFrame {
 
 	    volver_atras_btn.addActionListener(new ActionListener() {
 	        public void actionPerformed(ActionEvent e) {
-	            vistaAdminVentas ventana = new vistaAdminVentas();
+	            vistaMenuAdminVentas ventana = new vistaMenuAdminVentas();
 	            ventana.setVisible(true);
 	            dispose();
 	        }

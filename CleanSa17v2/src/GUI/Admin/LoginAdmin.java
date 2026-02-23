@@ -3,8 +3,8 @@ package GUI.Admin;
 import java.awt.Color;
 import java.awt.EventQueue;
 import DLL.*;
-import GUI.AdminENvios.vistaAdminEnvios;
-import GUI.AdminVentas.vistaAdminVentas;
+import GUI.AdminENvios.vistaMenuAdminEnvios;
+import GUI.AdminVentas.vistaMenuAdminVentas;
 import BLL.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -105,10 +105,10 @@ public LoginAdmin() {
 		            dispose(); //Cierra la ventana por que se abria la vista del administrador correspondiente
 		            switch (admin.getTipo()) {
 					case 1:
-						new vistaAdminVentas().setVisible(true);
+						new vistaMenuAdminVentas().setVisible(true);
 						break;
 					case 2:
-						new vistaAdminEnvios().setVisible(true);
+						new vistaMenuAdminEnvios().setVisible(true);
 						break;
 					default:
 	                    JOptionPane.showMessageDialog(null, "Tipo de administrador desconocido.");

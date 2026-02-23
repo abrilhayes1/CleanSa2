@@ -85,7 +85,7 @@ public class vistaDestroyProducto extends BaseFrame {
 
 	            if (eliminado) {
 	                JOptionPane.showMessageDialog(null, "Producto eliminado correctamente.");
-	                vistaAdminVentas ventana = new vistaAdminVentas();
+	                vistaMenuAdminVentas ventana = new vistaMenuAdminVentas();
 	                ventana.setVisible(true);
 	                dispose();
 	            } else {

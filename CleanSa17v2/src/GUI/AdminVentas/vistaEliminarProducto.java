@@ -116,7 +116,7 @@ public class vistaEliminarProducto extends BaseFrame {
 		btnSalir.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		btnSalir.setBounds(240, 350, 120, 40); // CENTRADO
 		btnSalir.addActionListener(e -> {
-			vistaAdminVentas vistaAdminVentas = new vistaAdminVentas();
+			vistaMenuAdminVentas vistaAdminVentas = new vistaMenuAdminVentas();
 			vistaAdminVentas.setVisible(true);
 		    dispose(); // CIERRA ESTA VENTANA
 		});

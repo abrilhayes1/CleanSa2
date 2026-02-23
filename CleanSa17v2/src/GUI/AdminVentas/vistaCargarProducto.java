@@ -207,7 +207,7 @@ public class vistaCargarProducto extends BaseFrame {
 	    btnVolver.setFont(new Font("Segoe UI", Font.BOLD, 14));
 	    btnVolver.setPreferredSize(new Dimension(120, 40));
 	    btnVolver.addActionListener(e -> {
-	        vistaAdminVentas vistaAdminVentas = new vistaAdminVentas();
+	        vistaMenuAdminVentas vistaAdminVentas = new vistaMenuAdminVentas();
 	        vistaAdminVentas.setVisible(true);
 	        dispose();
 	    });

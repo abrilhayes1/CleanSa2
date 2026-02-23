@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 import GUI.Admin.LoginAdmin;
 import GUI.common.BaseFrame;
 
-public class vistaAdminVentas extends BaseFrame {
+public class vistaMenuAdminVentas extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -23,7 +23,7 @@ public class vistaAdminVentas extends BaseFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					vistaAdminVentas frame = new vistaAdminVentas();
+					vistaMenuAdminVentas frame = new vistaMenuAdminVentas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class vistaAdminVentas extends BaseFrame {
 		});
 	}
 
-	public vistaAdminVentas() {
+	public vistaMenuAdminVentas() {
 		super();
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -70,13 +70,19 @@ public class vistaAdminVentas extends BaseFrame {
 		contentPane.add(btnNewButton_2);
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(vistaAdminVentas.class.getResource("/img/logo.png")));
+		lblNewLabel.setIcon(new ImageIcon(vistaMenuAdminVentas.class.getResource("/img/logo.png")));
 		lblNewLabel.setBounds(90, 10, 369, 127);
 		contentPane.add(lblNewLabel);
 
 		JButton ver_productos = new JButton("Ver productos");
 		ver_productos.setBounds(390, 183, 150, 23);
+		ver_productos.addActionListener(e -> {
+			vistaVerProductos vistaVerProductos = new vistaVerProductos(); // si tenés una vista específica para productos la podés poner acá
+			vistaVerProductos.setVisible(true);
+			dispose();
+		});
 		contentPane.add(ver_productos);
+	
 
 		JButton ver_clientes_btn = new JButton("Ver clientes");
 		ver_clientes_btn.setBounds(30, 153, 150, 23);

@@ -116,7 +116,7 @@ public class clientes extends BaseFrame {
         btnVolver.setBounds(650, 420, 120, 30);
         btnVolver.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		vistaAdminVentas vistaAdminVentas = new vistaAdminVentas();
+        		vistaMenuAdminVentas vistaAdminVentas = new vistaMenuAdminVentas();
         		vistaAdminVentas.setVisible(true);
         		dispose(); // CIERRA ESTA VISTA
         	}
