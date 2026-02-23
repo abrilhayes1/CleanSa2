@@ -1,6 +1,7 @@
 package GUI.AdminVentas;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -112,5 +113,14 @@ public class vistaMenuAdminVentas extends BaseFrame {
 		});
 		crear_categoria_btn.setBounds(390, 153, 150, 23);
 		contentPane.add(crear_categoria_btn);
+		
+		JButton btnAgregarCupon = new JButton("Agregar Cupón");
+		btnAgregarCupon.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnAgregarCupon.addActionListener(e -> {
+		    vistaCrearCupon v = new vistaCrearCupon();
+		    v.setVisible(true);
+		});
+		btnAgregarCupon.setBounds(390, 227, 150, 23);
+		contentPane.add(btnAgregarCupon);
 	}
 }
