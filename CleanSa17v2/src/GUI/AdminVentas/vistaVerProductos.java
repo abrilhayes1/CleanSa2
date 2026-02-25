@@ -52,7 +52,6 @@ public class vistaVerProductos extends BaseFrame {
 		topPanel.add(searchPanel, BorderLayout.EAST);
 		contentPane.add(topPanel, BorderLayout.NORTH);
 
-		// ====== CENTER: Tabla ======
 		model = new DefaultTableModel(new String[] { "Nombre", "Precio", "Stock", "Categoría" }, 0) {
 			@Override
 			public boolean isCellEditable(int row, int col) {
@@ -67,7 +66,6 @@ public class vistaVerProductos extends BaseFrame {
 		JScrollPane scrollPane = new JScrollPane(table);
 		contentPane.add(scrollPane, BorderLayout.CENTER);
 
-		// ====== SOUTH: seleccionado + botones ======
 		JPanel southPanel = new JPanel(new BorderLayout(10, 10));
 
 		JLabel lblSeleccionado = new JLabel("Seleccionado: -");
@@ -77,6 +75,12 @@ public class vistaVerProductos extends BaseFrame {
 		JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0));
 
 		JButton btnVolver = new JButton("Volver");
+		btnVolver.setBounds(210, 153, 150, 23);
+		btnVolver.addActionListener(e -> {
+			vistaMenuAdminVentas ventana = new vistaMenuAdminVentas();
+			ventana.setVisible(true);
+			dispose();
+		});
 		JButton btnActualizar = new JButton("Actualizar");
 		btnEditar = new JButton("Editar");
 		btnEliminar = new JButton("Eliminar");

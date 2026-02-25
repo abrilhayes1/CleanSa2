@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 import BLL.*;
 import DLL.*;
+import GUI.common.BaseFrame;
 import repositorio.Validador;
 
 import java.awt.*;
@@ -21,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
-public class Tabla3 extends JFrame implements Validador {
+public class Tabla3 extends BaseFrame implements Validador {
 	private static Connection con = Conexion.getInstance().getConnection();
 
 	private JPanel contentPane;
@@ -34,8 +35,7 @@ public class Tabla3 extends JFrame implements Validador {
 
 	public Tabla3(Cliente cliente) {
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 500);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(174, 174, 174));
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));

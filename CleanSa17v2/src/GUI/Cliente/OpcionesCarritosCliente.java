@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import BLL.Carrito;
 import BLL.Cliente;
 import DLL.ControllerCarrito;
+import GUI.common.BaseFrame;
 
 import java.awt.SystemColor;
 import javax.swing.JLabel;
@@ -20,7 +21,7 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.awt.event.ActionEvent;
 
-public class OpcionesCarritosCliente extends JFrame {
+public class OpcionesCarritosCliente extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -34,8 +35,7 @@ public class OpcionesCarritosCliente extends JFrame {
 	 * Create the frame.
 	 */
 	public OpcionesCarritosCliente(Cliente cliente) {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 594, 425);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

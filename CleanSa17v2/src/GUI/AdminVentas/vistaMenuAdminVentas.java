@@ -93,15 +93,25 @@ public class vistaMenuAdminVentas extends BaseFrame {
 			dispose();
 		});
 		contentPane.add(ver_clientes_btn);
-
-		JButton eliminar_productos_btn = new JButton("Eliminar producto");
-		eliminar_productos_btn.setBounds(210, 153, 150, 23);
-		eliminar_productos_btn.addActionListener(e -> {
-			vistaEliminarProducto ventana = new vistaEliminarProducto(this);
-			ventana.setVisible(true);
-			dispose();
+		
+		
+		
+		JButton btnAgregarCupon = new JButton("Agregar Cupón");
+		btnAgregarCupon.setBounds(210, 153, 150, 23);
+		btnAgregarCupon.addActionListener(e -> {
+		    vistaCrearCupon v = new vistaCrearCupon();
+		    v.setVisible(true);
+		    dispose();
 		});
-		contentPane.add(eliminar_productos_btn);
+		contentPane.add(btnAgregarCupon);
+//		JButton eliminar_productos_btn = new JButton("Eliminar producto");
+//		eliminar_productos_btn.setBounds(210, 153, 150, 23);
+//		eliminar_productos_btn.addActionListener(e -> {
+//			vistaEliminarProducto ventana = new vistaEliminarProducto(this);
+//			ventana.setVisible(true);
+//			dispose();
+//		});
+//		contentPane.add(eliminar_productos_btn);
 
 		JButton crear_categoria_btn = new JButton("Crear categoria");
 		crear_categoria_btn.addActionListener(new ActionListener() {
@@ -114,13 +124,6 @@ public class vistaMenuAdminVentas extends BaseFrame {
 		crear_categoria_btn.setBounds(390, 153, 150, 23);
 		contentPane.add(crear_categoria_btn);
 		
-		JButton btnAgregarCupon = new JButton("Agregar Cupón");
-		btnAgregarCupon.setFont(new Font("Segoe UI", Font.BOLD, 14));
-		btnAgregarCupon.addActionListener(e -> {
-		    vistaCrearCupon v = new vistaCrearCupon();
-		    v.setVisible(true);
-		});
-		btnAgregarCupon.setBounds(390, 227, 150, 23);
-		contentPane.add(btnAgregarCupon);
+		
 	}
 }

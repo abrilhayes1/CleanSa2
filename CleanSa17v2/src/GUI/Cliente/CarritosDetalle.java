@@ -11,6 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 import BLL.*;
 import DLL.*;
+import GUI.common.BaseFrame;
 import repositorio.Validador;
 
 import java.awt.*;
@@ -23,7 +24,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CarritosDetalle extends JFrame implements Validador {
+public class CarritosDetalle extends BaseFrame implements Validador {
 	private static Connection con = Conexion.getInstance().getConnection();
 
 	private JPanel contentPane;
@@ -34,8 +35,7 @@ public class CarritosDetalle extends JFrame implements Validador {
 
 	public CarritosDetalle(Cliente cliente, int id) {
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 500);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(174, 174, 174));
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));

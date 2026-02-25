@@ -11,6 +11,7 @@ import BLL.*;
 
 import DLL.*;
 import GUI.AdminVentas.VerCliente;
+import GUI.common.BaseFrame;
 import GUI.common.menuprincipal;
 
 import java.awt.SystemColor;
@@ -23,7 +24,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class generalCliente extends JFrame {
+public class generalCliente extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -37,8 +38,7 @@ public class generalCliente extends JFrame {
 	 * Create the frame.
 	 */
 	public generalCliente(Cliente cliente) {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 475, 328);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

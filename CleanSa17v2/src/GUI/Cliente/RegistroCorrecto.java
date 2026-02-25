@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import GUI.common.BaseFrame;
+
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -14,7 +16,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class RegistroCorrecto extends JFrame {
+public class RegistroCorrecto extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -28,8 +30,7 @@ public class RegistroCorrecto extends JFrame {
 	 * Create the frame.
 	 */
 	public RegistroCorrecto() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 526, 393);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

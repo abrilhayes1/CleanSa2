@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 import BLL.*;
 import DLL.*;
+import GUI.common.BaseFrame;
 import repositorio.Validador;
 
 import java.awt.*;
@@ -16,7 +17,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
 
-public class CarritosPagadosCliente extends JFrame implements Validador {
+public class CarritosPagadosCliente extends BaseFrame implements Validador {
 	private static Connection con = Conexion.getInstance().getConnection();
 
 	private JPanel contentPane;
@@ -27,8 +28,7 @@ public class CarritosPagadosCliente extends JFrame implements Validador {
 	public CarritosPagadosCliente(Cliente cliente) {
 		setTitle("carritopagados");
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 500);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(174, 174, 174));
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));

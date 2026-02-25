@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 import BLL.*;
 import DLL.ControllerCliente;
+import GUI.common.BaseFrame;
 
 import java.awt.SystemColor;
 import javax.swing.JLabel;
@@ -24,7 +25,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JList;
 
-public class Registro extends JFrame {
+public class Registro extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -43,8 +44,7 @@ public class Registro extends JFrame {
 	 */
 	public Registro() {
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 499, 457);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

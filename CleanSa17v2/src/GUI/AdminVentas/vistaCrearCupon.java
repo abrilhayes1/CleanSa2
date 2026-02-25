@@ -195,6 +195,8 @@ public class vistaCrearCupon extends BaseFrame {
 		});
 
 		btnCrear.addActionListener(e -> guardarCupon());
+		pack();
+		setLocationRelativeTo(null);
 	}
 
 	public vistaCrearCupon() {
@@ -309,6 +311,13 @@ public class vistaCrearCupon extends BaseFrame {
 			actualizarObjetivoSegunAlcance();
 		} else {
 			mostrarMsg("Error al crear el cupón (¿código repetido?).", Color.RED);
+		}
+
+		if (ok) {
+			JOptionPane.showMessageDialog(this, "Cupón creado correctamente ✅");
+			// (tu reset de campos)
+		} else {
+			JOptionPane.showMessageDialog(this, "Error al crear el cupón (¿código repetido?) ❌");
 		}
 	}
 

@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 
 import GUI.Admin.LoginAdmin;
 import GUI.Cliente.menuCliente;
+import GUI.common.BaseFrame;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -29,7 +30,7 @@ import javax.swing.JToggleButton;
 import javax.swing.JSlider;
 import javax.swing.JProgressBar;
 
-public class menuprincipal extends JFrame {
+public class menuprincipal extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -54,8 +55,7 @@ public class menuprincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public menuprincipal() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+;
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -68,7 +68,7 @@ public class menuprincipal extends JFrame {
 		lblNewLabel.setBounds(117, 205, 171, 56);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Elija que quiere ser...");
+		JLabel lblNewLabel_1 = new JLabel("Ingrese credenciales");
 		lblNewLabel_1.setFont(new Font("Verdana", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(140, 67, 234, 29);
 		contentPane.add(lblNewLabel_1);

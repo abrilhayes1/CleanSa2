@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 import BLL.Carrito;
 import GUI.Admin.LoginAdmin;
+import GUI.common.BaseFrame;
 
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
@@ -17,15 +18,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JList;
 
-public class verCarrito extends JFrame {
+public class verCarrito extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JButton btnNewButton;
 
 	public verCarrito(Carrito carrito) {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

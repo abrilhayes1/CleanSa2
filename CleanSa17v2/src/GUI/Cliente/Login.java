@@ -3,6 +3,7 @@ package GUI.Cliente;
 import java.awt.Color;
 import java.awt.EventQueue;
 import DLL.*;
+import GUI.common.BaseFrame;
 import BLL.*;
 
 import javax.swing.JFrame;
@@ -22,7 +23,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Login extends JFrame {
+public class Login extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -31,8 +32,7 @@ public class Login extends JFrame {
 	
 
 	public Login() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 481, 420);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

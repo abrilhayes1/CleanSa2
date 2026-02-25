@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import GUI.common.BaseFrame;
 import GUI.common.menuprincipal;
 
 import java.awt.SystemColor;
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
-public class menuCliente extends JFrame {
+public class menuCliente extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -42,8 +43,7 @@ public class menuCliente extends JFrame {
 	 * Create the frame.
 	 */
 	public menuCliente() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlShadow);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
