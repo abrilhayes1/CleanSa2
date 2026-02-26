@@ -1,22 +1,18 @@
 package BLL;
 
 public class ItemVenta {
+
     private int idProducto;
     private int idCategoria;
-    private double precioUnitario;
-    private int cantidad;
+    private double subtotal;
 
-    public ItemVenta(int idProducto, int idCategoria, double precioUnitario, int cantidad) {
+    public ItemVenta(int idProducto, int idCategoria, double subtotal) {
         this.idProducto = idProducto;
         this.idCategoria = idCategoria;
-        this.precioUnitario = precioUnitario;
-        this.cantidad = cantidad;
+        this.subtotal = subtotal;
     }
 
     public int getIdProducto() { return idProducto; }
     public int getIdCategoria() { return idCategoria; }
-    public double getPrecioUnitario() { return precioUnitario; }
-    public int getCantidad() { return cantidad; }
-
-    public double getSubtotal() { return precioUnitario * cantidad; }
+    public double getSubtotal() { return subtotal; }
 }

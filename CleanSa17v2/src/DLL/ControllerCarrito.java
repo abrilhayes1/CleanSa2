@@ -435,4 +435,61 @@ public class ControllerCarrito implements  CarritoRepository{
 		return carrito_detalle;
 
 	}
+	
+	public List<ItemVenta> obtenerItemsCarritoEnProceso(int idCliente){
+		
+		List<ItemVenta> items = new LinkedList<>();
+		try {
+			PreparedStatement stmt = con.prepareStatement(
+					"SELECT * from carrtito WHERE fk_cliente = ? AND estado= ?"
+					);
+			stmt.setInt(1, idCliente);
+			stmt.setString(2, "en proceso");
+			
+			ResultSet rs = stmt.executeQuery();
+			if (!rs.next()) {
+				return items;
+			}
+			
+			int idCarrito = rs.getInt("id_carrito");
+			PreparedStatement stmtDetalle = con.prepareStatement(
+					"SELECT * from carrito_detalle WHERE fk_carrito =?"
+					);
+			stmtDetalle.setInt(1, idCarrito);
+			ResultSet rsDetalle = stmtDetalle.executeQuery();
+			
+			while(rsDetalle.next()) {
+				
+				int idProducto = rsDetalle.getInt("fk_producto");
+				double subtotal = rsDetalle.getDouble("total_producto");
+				
+				PreparedStatement stmtProd = con.prepareStatement(
+						"SELECT fk_categoria FROM producto WHERE id_producto = ?"
+						);
+				
+				stmtProd.setInt(1, idProducto);
+				ResultSet rsProd = stmtProd.executeQuery();
+				
+				int idCategoria = 0;
+				
+				if (rsProd.next()) {
+	                idCategoria = rsProd.getInt("fk_categoria");
+	            }
+				
+				ItemVenta item = new ItemVenta(idProducto, idCategoria, subtotal);
+				
+				items.add(item);
+				
+				
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		return items;
+		
+	}
 }

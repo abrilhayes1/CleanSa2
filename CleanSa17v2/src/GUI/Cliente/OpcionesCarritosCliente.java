@@ -26,14 +26,6 @@ public class OpcionesCarritosCliente extends BaseFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-
-
-	/**
-	 * Create the frame.
-	 */
 	public OpcionesCarritosCliente(Cliente cliente) {
 
 		contentPane = new JPanel();
