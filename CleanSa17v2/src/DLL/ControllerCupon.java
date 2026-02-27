@@ -126,8 +126,8 @@ public class ControllerCupon {
             return base * (c.getValor() / 100.0);
         }
 
-        // tipo == 2 (monto fijo)
-        return Math.min(c.getValor(), base); // nunca más que la base
+        
+        return Math.min(c.getValor(), base);
     }
     
     public double calcularBaseSegunAlcance(Cupon c, List<ItemVenta> items, double totalCarrito) {
