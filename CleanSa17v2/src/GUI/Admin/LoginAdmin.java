@@ -3,7 +3,7 @@ package GUI.Admin;
 import java.awt.Color;
 import java.awt.EventQueue;
 import DLL.*;
-import GUI.AdminENvios.vistaMenuAdminEnvios;
+import GUI.AdminEnvios.vistaMenuAdminEnvios;
 import GUI.AdminVentas.vistaMenuAdminVentas;
 import BLL.*;
 import javax.swing.JFrame;

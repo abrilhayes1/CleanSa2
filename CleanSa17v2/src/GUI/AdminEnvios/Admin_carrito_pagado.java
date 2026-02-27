@@ -1,4 +1,4 @@
-package GUI.AdminENvios;
+package GUI.AdminEnvios;
 
 import java.awt.EventQueue;
 import java.awt.SystemColor;
@@ -21,7 +21,7 @@ import BLL.*;
 import DLL.*;
 import GUI.common.BaseFrame;
 
-public class Admin_carrito_proceso extends BaseFrame {
+public class Admin_carrito_pagado extends BaseFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -49,8 +49,8 @@ public class Admin_carrito_proceso extends BaseFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Admin_carrito_proceso() {
-			super();
+	public Admin_carrito_pagado() {
+		super();
 	        contentPane = new JPanel();
 	        contentPane.setBackground(SystemColor.controlShadow);
 	        contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -106,7 +106,7 @@ public class Admin_carrito_proceso extends BaseFrame {
 
 	    private void cargarTabla() {
 	        model.setRowCount(0);
-	        LinkedList<Carrito> carritos = ControllerCarrito.mostrarCarritoEnProseso();
+	        LinkedList<Carrito> carritos = ControllerCarrito.mostrarCarritosPagados();
 	        for (Carrito u : carritos) {
 	            model.addRow(
 

@@ -1,4 +1,4 @@
-package GUI.AdminENvios;
+package GUI.AdminEnvios;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
