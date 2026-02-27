@@ -51,7 +51,7 @@ public class vistaMenuAdminEnvios extends BaseFrame {
 		btnVerCarritos.setBounds(40, 190, 140, 30);
 		btnVerCarritos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				verCarrito ventana = new verCarrito(null);
+				Admin_carrito_proceso ventana = new Admin_carrito_proceso();
 				ventana.setVisible(true);
 			}
 		});
